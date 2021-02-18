@@ -1,0 +1,67 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+}
+
+.add-todo-input {
+  outline: none;
+}
+
+.add-todo-input:focus {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+button {
+  border-style: none; 
+}
+
+button:hover {
+  background-color: rgb(153, 153, 153);
+  color: white;
+}
+
+input::placeholder {
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 375px) {
+  input::placeholder {
+    font-size: 0.5em;
+  }
+}
+
+.todoHeading {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+.activeFilter {
+  background-color: rgb(68, 68, 68);
+  color: white;
+}
+
+.todoList {
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+.todoLine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todoName {
+  padding-left: 10px;
+}
+
+.DeleteSVG {
+  width: 15px;
+  height: 100%;
+}
