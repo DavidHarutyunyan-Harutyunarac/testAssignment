@@ -13,7 +13,9 @@ const TodoList = observer(({ store }) => {
 
   const onNewTodo = () => {
     let newTodoName = document.forms["add-todo-form"].newToDoName.value;
-    store.addTodo(newTodoName);
+    !newTodoName.trim()
+      ? alert("Нельзя добавить пустую задачу")
+      : store.addTodo(newTodoName);
   };
 
   const setFilter = (filter) => {
@@ -44,10 +46,7 @@ const TodoList = observer(({ store }) => {
               </form>
             </div>
             <div className="col-auto px-0 mx-0 mr-2">
-              <button
-                onClick={onNewTodo}
-                className="btn btn-primary"
-              >
+              <button onClick={onNewTodo} className="btn btn-primary">
                 Добавить
               </button>
             </div>
